@@ -7,6 +7,7 @@ import {
   doc,
   updateDoc,
   increment,
+  onSnapshot,
 } from 'firebase/firestore';
 
 const firebaseConfig = {
@@ -44,13 +45,9 @@ const vote = (pollId, answerObj) => {
     updateDoc(answerRef, {
       votes: increment(1),
     });
-    const totalRef = doc(db, 'polls', pollId);
-    updateDoc(totalRef, {
-      totalVotes: increment(1),
-    });
   } catch (err) {
     console.log(err);
   }
 };
 
-export { fetchQuestion, fetchAnswers, vote };
+export { fetchQuestion, fetchAnswers, vote, db };

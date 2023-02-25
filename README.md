@@ -1,20 +1,18 @@
-# POLL WIDGET
+# Polling Widget
 
 ## A real-time polling widget
 
 #### TODO NEXT
 
-- implement real-time data watching for vote totals
-
 #### TODO LATER
-
-##### Features
 
 - after submitting, change answers to show as results with percentages
 
-##### Behavior
+##### Features
 
-- ? refactor and delete totalVotes field in database; replace with state that tracks total votes via a useEffect watching each answer's vote totals and recalculating total each change
+- after submitting, disable submit option
+
+##### Behavior
 
 ##### Style
 
@@ -22,6 +20,11 @@
 - add credit
 
 #### DONE
+
+_0.2.0_
+
+- implement real-time data watching for vote totals
+- refactor and delete totalVotes field in database; replace with state that tracks total votes via a useEffect watching each answer's vote totals and recalculating total each change
 
 _0.1.0_
 
