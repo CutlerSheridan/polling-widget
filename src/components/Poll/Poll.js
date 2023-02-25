@@ -57,11 +57,13 @@ const Poll = (props) => {
     <div className="poll-outerContainer">
       <div className="poll-innerContainer">
         <h2 className="poll-heading">{question}</h2>
-        <form onSubmit={handleSubmit}>
-          {answers.map((x) => (
-            <PollAnswer answer={x} key={x.id} choice={choice} />
-          ))}
-          <p>total votes: {totalVotes}</p>
+        <form className="poll-form" onSubmit={handleSubmit}>
+          <div className="poll-answersContainer">
+            {answers.map((x) => (
+              <PollAnswer answer={x} key={x.id} choice={choice} />
+            ))}
+          </div>
+          <p>Total votes: {totalVotes}</p>
           <button type="submit">Submit</button>
         </form>
       </div>

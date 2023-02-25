@@ -1,4 +1,9 @@
 :root {
+  --clr-1: red;
+  --clr-2: white;
+  --clr-2-dark: rgb(220, 220, 220);
+  --clr-3: black;
+  --clr-3-light: rgb(100, 100, 100);
   font-size: 62.5%;
 }
 * {

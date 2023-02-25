@@ -17,9 +17,17 @@
 ##### Style
 
 - make it all look like Persona 5
+- write function to randomize look of each letter for question? or each answer? both? and definitely submit button
+- make answer text white with black outline
 - add credit
 
 #### DONE
+
+_0.2.1_
+
+- adjust some spacing
+- add some borders
+- replace default radio buttons with customs
 
 _0.2.0_
 

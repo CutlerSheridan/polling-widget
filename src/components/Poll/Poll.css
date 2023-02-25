@@ -1,8 +1,9 @@
 .poll-outerContainer {
   padding: 2rem;
-  background: pink;
+  background: var(--clr-3);
 }
 .poll-innerContainer {
   padding: 2rem;
-  background: red;
+  background: var(--clr-1);
+  border: 10px solid var(--clr-2);
 }

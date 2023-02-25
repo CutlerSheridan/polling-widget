@@ -1,6 +1,51 @@
+.poll-answersContainer {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.poll-answerGroup {
+  margin: 0.3rem 0;
+  display: flex;
+  align-items: center;
+}
 .poll-chosenAnswer {
   background: white;
 }
+.poll-answerRadio {
+  position: relative;
+  height: 1.6rem;
+  width: 1.6rem;
+  visibility: hidden;
+}
+.poll-answerRadio::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: solid 3px var(--clr-2);
+  border-radius: 1rem;
+  background: var(--clr-2);
+  visibility: visible;
+  display: block;
+  box-sizing: border-box;
+}
+.poll-answerRadio:active::before {
+  background: var(--clr-3-light);
+}
+.poll-answerRadio:checked::before {
+  background: var(--clr-3);
+}
 .poll-answerLabel {
-  list-style-position: inside;
+  margin-left: 1rem;
+}
+.poll-form > button {
+  margin-top: 1rem;
+}
+.poll-answerGroup:not(.submitted),
+.poll-answerRadio:not(.submitted)::before,
+.poll-answerLabel:not(.submitted) {
+  cursor: pointer;
 }
