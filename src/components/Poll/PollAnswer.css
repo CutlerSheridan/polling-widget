@@ -6,14 +6,21 @@
 }
 .poll-answerGroup {
   margin: 0.3rem 0;
+  padding: 0.2rem;
   width: 100%;
   display: flex;
-  flex-direction: column;
-  /* align-items: center; */
 }
 .poll-chosenAnswer {
   background: var(--clr-2);
   font-weight: bold;
+}
+
+/* LEFT SIDE START */
+.poll-answerLeftSide {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .poll-radioLabelContainer {
   display: flex;
@@ -54,8 +61,10 @@
   cursor: pointer;
 }
 .poll-answerPercentBar {
+  position: relative;
+  /* top: -0.3rem; */
   height: 1rem;
-  background: transparent;
+  background: var(--clr-3);
   border: 2px solid var(--clr-3);
   transition: width 1s;
   visibility: hidden;
@@ -63,6 +72,28 @@
 .poll-answerPercentBar.submitted {
   visibility: visible;
 }
+/* LEFT SIDE END */
+
+/* RIGHT SIDE START */
+.poll-answerRightSide {
+  text-align: right;
+  min-width: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  visibility: hidden;
+}
+.poll-answerRightSide.submitted {
+  visibility: visible;
+}
+.poll-answerPercentNum {
+  font-size: 1.8rem;
+  /* background: blue; */
+}
+.poll-answerTotalVotes {
+  font-size: 1.3rem;
+}
+/* RIGHT SIDE END */
 
 .submitted {
   /* cursor: default; */

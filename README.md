@@ -6,7 +6,7 @@
 
 #### TODO LATER
 
-- after submitting, change answers to show as results with percentages
+- refactor DOM structure so choice and percent num are grouped and percent bar and num of votes are grouped
 
 ##### Features
 
@@ -17,12 +17,24 @@
 
 ##### Style
 
+- make choice highlighted and top answer bold or something to differentiate them; or just leave the checked radio by your choice and only style the top answer differently
 - make it all look like Persona 5
-- write function to randomize look of each letter for question? or each answer? both? and definitely submit button
+- write function to randomize look of each letter for question? or each answer? both? submit button?
+  - white text, black outline, transparent background
+  - white text, black background
+  - black text, white background
+  - black text, white outline, transparent background
+  - some uppercase, some lowercase (more upper, first always upper)
+  - also tilt some of them
 - make answer text white with black outline
 - add credit
 
 #### DONE
+
+_0.3.1_
+
+- make text white with black outline by default
+- style submit button
 
 _0.3.0_
 

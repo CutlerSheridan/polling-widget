@@ -68,8 +68,10 @@ const Poll = (props) => {
               />
             ))}
           </div>
-          <p>Total votes: {totalVotes}</p>
-          <button type="submit">Submit</button>
+          <div className="poll-submitBar">
+            <button type="submit">Submit</button>
+            <p>{totalVotes} votes</p>
+          </div>
         </form>
       </div>
     </div>

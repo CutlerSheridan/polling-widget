@@ -21,28 +21,44 @@ const PollAnswer = (props) => {
       ${choice.id === answer.id ? 'poll-chosenAnswer' : ''}
       ${hasBeenSubmitted ? 'submitted' : ''}`}
     >
-      <div className="poll-radioLabelContainer">
-        <input
-          type="radio"
-          className={`poll-answerRadio ${hasBeenSubmitted ? 'submitted' : ''}`}
-          name="poll-answer"
-          id={answer.id}
-          value={answer.id}
-          required="required"
-        />
-        <label
-          className={`poll-answerLabel ${hasBeenSubmitted ? 'submitted' : ''}`}
-          htmlFor={answer.id}
-        >
-          {answer.name ? answer.name : 'test'} = {answer.votes}
-        </label>
+      <div className={`poll-answerLeftSide`}>
+        <div className="poll-radioLabelContainer">
+          <input
+            type="radio"
+            className={`poll-answerRadio ${
+              hasBeenSubmitted ? 'submitted' : ''
+            }`}
+            name="poll-answer"
+            id={answer.id}
+            value={answer.id}
+            required="required"
+          />
+          <label
+            className={`poll-answerLabel ${
+              hasBeenSubmitted ? 'submitted' : ''
+            }`}
+            htmlFor={answer.id}
+          >
+            {answer.name ? answer.name : 'test'}
+          </label>
+        </div>
+        <div
+          className={`poll-answerPercentBar ${
+            hasBeenSubmitted ? 'submitted' : ''
+          }`}
+          style={{ width: (hasBeenSubmitted ? percentOfVotes : 0) + '%' }}
+        ></div>
       </div>
       <div
-        className={`poll-answerPercentBar ${
+        className={`poll-answerRightSide ${
           hasBeenSubmitted ? 'submitted' : ''
         }`}
-        style={{ width: (hasBeenSubmitted ? percentOfVotes : 0) + '%' }}
-      ></div>
+      >
+        <div className={`poll-answerPercentNum`}>
+          {Math.round(percentOfVotes)}%
+        </div>
+        <div className={`poll-answerTotalVotes`}>({answer.votes} votes)</div>
+      </div>
     </div>
   );
 };

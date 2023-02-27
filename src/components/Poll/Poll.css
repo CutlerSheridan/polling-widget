@@ -1,4 +1,7 @@
 .poll-outerContainer {
+  --blur: 1px;
+  --positives: 1px;
+  --negatives: -1px;
   padding: 2rem;
   max-width: 60rem;
   background: var(--clr-3);
@@ -7,4 +10,24 @@
   padding: 2rem;
   background: var(--clr-1);
   border: 10px solid var(--clr-2);
+  color: var(--clr-2);
+  text-shadow: var(--positives) var(--positives) var(--blur) var(--clr-3),
+    var(--positives) var(--negatives) var(--blur) var(--clr-3),
+    var(--negatives) var(--positives) var(--blur) var(--clr-3),
+    var(--negatives) var(--negatives) var(--blur) var(--clr-3);
+}
+.poll-submitBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.poll-submitBar > button[type='submit'] {
+  padding: 0.6rem 1rem;
+  font-weight: bold;
+  color: inherit;
+  background: var(--clr-3);
+  border: none;
+}
+.poll-submitBar > p {
+  font-weight: bold;
 }
