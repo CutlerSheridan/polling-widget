@@ -11,6 +11,7 @@
 ##### Features
 
 - after submitting, disable submit option
+- add 'see results' button without voting
 
 ##### Behavior
 
@@ -22,6 +23,13 @@
 - add credit
 
 #### DONE
+
+_0.3.0_
+
+- disable radio buttons upon voting
+- add percent bar under choices
+- make percent bar width widen to appropriate width upon voting
+- make percent bar only visible after voting
 
 _0.2.1_
 

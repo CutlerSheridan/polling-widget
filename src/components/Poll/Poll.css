@@ -1,5 +1,6 @@
 .poll-outerContainer {
   padding: 2rem;
+  max-width: 60rem;
   background: var(--clr-3);
 }
 .poll-innerContainer {

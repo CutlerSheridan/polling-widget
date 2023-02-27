@@ -14,7 +14,7 @@ const Poll = (props) => {
   const [question, setQuestion] = useState('...');
   const [answers, setAnswers] = useState([]);
   const [totalVotes, setTotalVotes] = useState(0);
-  const [choice, setChoice] = useState({});
+  const [choice, setChoice] = useState({ isAwaitingChoice: true });
 
   useEffect(() => {
     fetchQuestion(pollId).then((result) => {
@@ -60,7 +60,12 @@ const Poll = (props) => {
         <form className="poll-form" onSubmit={handleSubmit}>
           <div className="poll-answersContainer">
             {answers.map((x) => (
-              <PollAnswer answer={x} key={x.id} choice={choice} />
+              <PollAnswer
+                answer={x}
+                choice={choice}
+                totalVotes={totalVotes}
+                key={x.id}
+              />
             ))}
           </div>
           <p>Total votes: {totalVotes}</p>

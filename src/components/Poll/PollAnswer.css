@@ -6,11 +6,18 @@
 }
 .poll-answerGroup {
   margin: 0.3rem 0;
+  width: 100%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  /* align-items: center; */
 }
 .poll-chosenAnswer {
-  background: white;
+  background: var(--clr-2);
+  font-weight: bold;
+}
+.poll-radioLabelContainer {
+  display: flex;
+  align-items: center;
 }
 .poll-answerRadio {
   position: relative;
@@ -41,11 +48,26 @@
 .poll-answerLabel {
   margin-left: 1rem;
 }
-.poll-form > button {
-  margin-top: 1rem;
-}
 .poll-answerGroup:not(.submitted),
 .poll-answerRadio:not(.submitted)::before,
 .poll-answerLabel:not(.submitted) {
   cursor: pointer;
+}
+.poll-answerPercentBar {
+  height: 1rem;
+  background: transparent;
+  border: 2px solid var(--clr-3);
+  transition: width 1s;
+  visibility: hidden;
+}
+.poll-answerPercentBar.submitted {
+  visibility: visible;
+}
+
+.submitted {
+  /* cursor: default; */
+}
+
+.poll-form > button {
+  margin-top: 1rem;
 }
