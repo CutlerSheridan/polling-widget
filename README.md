@@ -4,26 +4,34 @@
 
 #### TODO NEXT
 
-- make text outlines thicker
+- ? tilt boxes to make it all more angular
 
 #### TODO LATER
 
 ##### Features
 
-- after submitting, disable submit option
 - add 'see results' button without voting
 
 ##### Behavior
 
-- refactor DOM structure so choice and percent num are grouped and percent bar and num of votes are grouped
+- after submitting, disable submit option
+- prevent changing answer after submitting
+- ? refactor DOM structure so choice and percent num are grouped and percent bar and num of votes are grouped
 
 ##### Style
 
+- ? make one corner of poll background grey
 - make choice highlighted and top answer bold or something to differentiate them; or just leave the checked radio by your choice and only style the top answer differently
 - make it all look like Persona 5
 - add credit
 
 #### DONE
+
+_0.3.4_
+
+- make some letters tilt to a lesser degree
+- refactor letter style randomization to be more random
+- change text stroke approach for more crisp, thicker outlines
 
 _0.3.3_
 

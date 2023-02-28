@@ -36,7 +36,9 @@ const Poll = (props) => {
     });
   }, []);
   useEffect(() => {
-    styleLetters();
+    if (question !== '...') {
+      styleLetters();
+    }
   }, [question]);
   useEffect(() => {
     let total = 0;
@@ -62,12 +64,18 @@ const Poll = (props) => {
     return (
       <div className="text-styledContainer">
         {wordArray.map((word, index) => {
-          const wordId = `word${word}${index}${textArray[index]}`;
           return (
-            <div className="text-styledWord" key={`word${wordId}`}>
-              {[...word].map((char, index) => {
-                const charId = `char${char}${index}${textArray[index]}`;
-                return <span key={`char${charId}`}>{char}</span>;
+            <div className="text-styledWord" key={`word${word}${index}`}>
+              {[...word].map((char, ind) => {
+                return (
+                  <span
+                    className="text-withStroke"
+                    data-text={char}
+                    key={`char${char}${index}${ind}`}
+                  >
+                    {char}
+                  </span>
+                );
               })}
               {index < wordArray.length - 1 ? (
                 <span className="text-wordSpace"> </span>
@@ -79,27 +87,17 @@ const Poll = (props) => {
         })}
       </div>
     );
-    // return (
-    //   <div className="text-spanGroup">
-    //     {textArray.map((char, index) => (
-    //       <span key={index}>{char}</span>
-    //     ))}
-    //   </div>
-    // );
   };
   const styleLetters = () => {
     const lettersToStyle = Array.from(
       document.querySelectorAll('.text-styledWord span')
     );
-    if (lettersToStyle !== ['.', '.', '.']) {
-      lettersToStyle.forEach((el) =>
-        el.classList.add(...randomizeLetterStyles(el.textContent))
-      );
-    }
+    lettersToStyle.forEach((el) =>
+      el.classList.add(...randomizeLetterStyles(el.textContent))
+    );
   };
   const randomizeLetterStyles = (char) => {
     let classes = [];
-    const randomSeed = Math.floor((Math.random() * 100 * 56) / 100);
     if (char !== ' ') {
       // 56 total
       // 15 lowercase ?
@@ -112,6 +110,7 @@ const Poll = (props) => {
       // 15 leaning letters
       //// 8 left-leaning
       //// 7 right-leaning
+      let randomSeed = Math.floor((Math.random() * 100 * 56) / 100);
       if (char !== char.toUpperCase()) {
         if (randomSeed > 15) {
           classes.push('text-uppercase');
@@ -119,9 +118,11 @@ const Poll = (props) => {
       } else if (char !== char.toLowerCase() || /[0-9|?]/.test(char)) {
         classes.push('text-bigger');
       }
+      randomSeed = Math.floor((Math.random() * 100 * 56) / 100);
       if (randomSeed > 43) {
         classes.push('text-bigger');
       }
+      randomSeed = Math.floor((Math.random() * 100 * 56) / 100);
       if (randomSeed <= 8) {
         if (randomSeed <= 5) {
           classes.push('text-black-whiteBackground');
@@ -129,11 +130,16 @@ const Poll = (props) => {
           classes.push('text-black-whiteOutline');
         }
       }
-      if (randomSeed <= 15) {
+      randomSeed = Math.floor((Math.random() * 100 * 56) / 100);
+      if (randomSeed <= 30) {
         if (randomSeed <= 8) {
           classes.push('text-leanLeft');
-        } else {
+        } else if (randomSeed <= 15) {
           classes.push('text-leanRight');
+        } else if (randomSeed <= 24) {
+          classes.push('text-slightLeanLeft');
+        } else {
+          classes.push('text-slightLeanRight');
         }
       }
     }
@@ -160,7 +166,9 @@ const Poll = (props) => {
           </div>
           <div className="poll-submitBar">
             <button type="submit">Submit</button>
-            <p>{totalVotes} votes</p>
+            <p className="text-withStroke" data-text={`${totalVotes} votes`}>
+              {totalVotes} votes
+            </p>
           </div>
         </form>
       </div>

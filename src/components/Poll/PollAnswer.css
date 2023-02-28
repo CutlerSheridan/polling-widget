@@ -9,10 +9,9 @@
   padding: 0.2rem;
   width: 100%;
   display: flex;
-  font-weight: bold;
 }
 .poll-chosenAnswer {
-  background: var(--clr-2-dark);
+  /* background: var(--clr-2-dark); */
 }
 
 /* LEFT SIDE START */
@@ -30,7 +29,6 @@
   position: relative;
   height: 1.6rem;
   width: 1.6rem;
-  visibility: hidden;
 }
 .poll-answerRadio::before {
   content: '';
@@ -55,7 +53,6 @@
 .poll-answerLabel {
   --bigger-font: 2.4rem;
   margin-left: 1rem;
-  font-weight: bold;
 }
 .poll-answerGroup:not(.submitted),
 .poll-answerRadio:not(.submitted)::before,
@@ -64,7 +61,7 @@
 }
 .poll-answerPercentBar {
   position: relative;
-  /* top: -0.3rem; */
+  margin-top: 0.2rem;
   height: 1rem;
   background: var(--clr-3);
   border: 2px solid var(--clr-3);
@@ -90,10 +87,16 @@
 }
 .poll-answerPercentNum {
   font-size: 1.8rem;
-  /* background: blue; */
 }
 .poll-answerTotalVotes {
   font-size: 1.3rem;
+}
+.poll-answerPercentNum.text-withStroke::before,
+.poll-answerTotalVotes.text-withStroke::before {
+  right: 0;
+}
+.poll-answerTotalVotes.text-withStroke::before {
+  -webkit-text-stroke-width: 6px;
 }
 /* RIGHT SIDE END */
 

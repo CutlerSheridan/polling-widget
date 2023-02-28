@@ -54,10 +54,18 @@ const PollAnswer = (props) => {
           hasBeenSubmitted ? 'submitted' : ''
         }`}
       >
-        <div className={`poll-answerPercentNum`}>
+        <div
+          className={`poll-answerPercentNum text-withStroke`}
+          data-text={`${Math.round(percentOfVotes)}%`}
+        >
           {Math.round(percentOfVotes)}%
         </div>
-        <div className={`poll-answerTotalVotes`}>({answer.votes} votes)</div>
+        <div
+          className={`poll-answerTotalVotes text-withStroke`}
+          data-text={`(${answer.votes} votes)`}
+        >
+          ({answer.votes} votes)
+        </div>
       </div>
     </div>
   );
