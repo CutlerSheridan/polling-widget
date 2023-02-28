@@ -3,7 +3,7 @@
   --positives: 1px;
   --negatives: -1px;
   padding: 2rem;
-  max-width: 60rem;
+  max-width: 65rem;
   background: var(--clr-3);
 }
 .poll-innerContainer {
@@ -15,6 +15,12 @@
     var(--positives) var(--negatives) var(--blur) var(--clr-3),
     var(--negatives) var(--positives) var(--blur) var(--clr-3),
     var(--negatives) var(--negatives) var(--blur) var(--clr-3);
+}
+.poll-heading {
+  --bigger-font: 3.3rem;
+  /* margin-bottom: 1rem; */
+  font-size: 2.4rem;
+  white-space: pre-wrap;
 }
 .poll-submitBar {
   display: flex;
@@ -31,3 +37,32 @@
 .poll-submitBar > p {
   font-weight: bold;
 }
+
+/* TEXT STYLES START */
+.text-bigger {
+  font-size: var(--bigger-font);
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-black-whiteBackground {
+  color: var(--clr-3);
+  background: var(--clr-2);
+  text-shadow: none;
+}
+.text-black-whiteOutline {
+  color: var(--clr-3);
+  text-shadow: var(--positives) var(--positives) var(--blur) var(--clr-2),
+    var(--positives) var(--negatives) var(--blur) var(--clr-2),
+    var(--negatives) var(--positives) var(--blur) var(--clr-2),
+    var(--negatives) var(--negatives) var(--blur) var(--clr-2);
+}
+.text-leanLeft {
+  display: inline-block;
+  transform: rotate(-15deg);
+}
+.text-leanRight {
+  display: inline-block;
+  transform: rotate(15deg);
+}
+/* TEXT STYLES END */

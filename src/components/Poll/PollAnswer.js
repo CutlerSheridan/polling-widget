@@ -1,7 +1,7 @@
 import './PollAnswer.css';
 
 const PollAnswer = (props) => {
-  const { answer, choice, totalVotes } = props;
+  const { answer, choice, totalVotes, createSpansForText } = props;
   const percentOfVotes = (answer.votes * 100) / totalVotes;
   let hasBeenSubmitted = choice.isAwaitingChoice ? false : true;
 
@@ -39,7 +39,7 @@ const PollAnswer = (props) => {
             }`}
             htmlFor={answer.id}
           >
-            {answer.name ? answer.name : 'test'}
+            {createSpansForText(answer.name)}
           </label>
         </div>
         <div
