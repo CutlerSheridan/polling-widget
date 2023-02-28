@@ -4,11 +4,9 @@
 
 #### TODO NEXT
 
-- fix letter style randomization so words don't break across lines
+- make text outlines thicker
 
 #### TODO LATER
-
-- refactor DOM structure so choice and percent num are grouped and percent bar and num of votes are grouped
 
 ##### Features
 
@@ -17,22 +15,20 @@
 
 ##### Behavior
 
+- refactor DOM structure so choice and percent num are grouped and percent bar and num of votes are grouped
+
 ##### Style
 
-- make text outlines thicker
 - make choice highlighted and top answer bold or something to differentiate them; or just leave the checked radio by your choice and only style the top answer differently
 - make it all look like Persona 5
-- write function to randomize look of each letter for question? or each answer? both? submit button?
-  - white text, black outline, transparent background
-  - ? white text, black background
-  - black text, white background
-  - black text, white outline, transparent background
-  - some uppercase, some lowercase (more upper, first always upper)
-  - have some be unusually large
-  - also tilt some of them
 - add credit
 
 #### DONE
+
+_0.3.3_
+
+- fix letter style randomization so words don't break across lines
+- spread the letters out a bit
 
 _0.3.2_
 

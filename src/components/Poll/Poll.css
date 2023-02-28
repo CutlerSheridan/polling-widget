@@ -18,7 +18,6 @@
 }
 .poll-heading {
   --bigger-font: 3.3rem;
-  /* margin-bottom: 1rem; */
   font-size: 2.4rem;
   white-space: pre-wrap;
 }
@@ -33,12 +32,25 @@
   color: inherit;
   background: var(--clr-3);
   border: none;
+  cursor: pointer;
 }
 .poll-submitBar > p {
   font-weight: bold;
 }
 
 /* TEXT STYLES START */
+.text-styledContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  letter-spacing: 0.1rem;
+}
+.text-styledWord {
+  width: max-content;
+}
+.text-wordSpace {
+  margin: 0 0.2rem;
+}
 .text-bigger {
   font-size: var(--bigger-font);
 }

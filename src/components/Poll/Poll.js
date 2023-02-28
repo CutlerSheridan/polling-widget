@@ -57,18 +57,39 @@ const Poll = (props) => {
   };
 
   const createSpansForText = (text) => {
+    const wordArray = text.split(' ');
     const textArray = [...text];
     return (
-      <p className="text-spanGroup">
-        {textArray.map((char, index) => (
-          <span key={index}>{char}</span>
-        ))}
-      </p>
+      <div className="text-styledContainer">
+        {wordArray.map((word, index) => {
+          const wordId = `word${word}${index}${textArray[index]}`;
+          return (
+            <div className="text-styledWord" key={`word${wordId}`}>
+              {[...word].map((char, index) => {
+                const charId = `char${char}${index}${textArray[index]}`;
+                return <span key={`char${charId}`}>{char}</span>;
+              })}
+              {index < wordArray.length - 1 ? (
+                <span className="text-wordSpace"> </span>
+              ) : (
+                ''
+              )}
+            </div>
+          );
+        })}
+      </div>
     );
+    // return (
+    //   <div className="text-spanGroup">
+    //     {textArray.map((char, index) => (
+    //       <span key={index}>{char}</span>
+    //     ))}
+    //   </div>
+    // );
   };
   const styleLetters = () => {
     const lettersToStyle = Array.from(
-      document.querySelectorAll('.text-spanGroup > span')
+      document.querySelectorAll('.text-styledWord span')
     );
     if (lettersToStyle !== ['.', '.', '.']) {
       lettersToStyle.forEach((el) =>
