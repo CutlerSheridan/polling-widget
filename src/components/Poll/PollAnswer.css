@@ -59,9 +59,12 @@
 .poll-answerLabel:not(.submitted) {
   cursor: pointer;
 }
+.poll-answerGroup.submitted {
+  pointer-events: none;
+}
 .poll-answerPercentBar {
   position: relative;
-  margin-top: 0.2rem;
+  margin-top: 0.4rem;
   height: 1rem;
   background: var(--clr-3);
   border: 2px solid var(--clr-3);

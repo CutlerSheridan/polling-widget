@@ -4,19 +4,16 @@
 
 #### TODO NEXT
 
-- ? tilt boxes to make it all more angular
+- ? refactor DOM structure so choice and percent num are grouped and percent bar and num of votes are grouped
+- ? refactor hasBeenSubmitted into state of Poll to pass down into PollAnswer;
 
 #### TODO LATER
 
 ##### Features
 
-- add 'see results' button without voting
+- add 'see results' button without voting in place of total vote count in bottom right, then swap with total vote count upon clicking that or submitting a vote
 
 ##### Behavior
-
-- after submitting, disable submit option
-- prevent changing answer after submitting
-- ? refactor DOM structure so choice and percent num are grouped and percent bar and num of votes are grouped
 
 ##### Style
 
@@ -26,6 +23,12 @@
 - add credit
 
 #### DONE
+
+_0.3.5_
+
+- tilt boxes to make it feel more dynamic
+- disable submit button before any option is clicked and after submitting answer
+- prevent changing answer after submitting
 
 _0.3.4_
 

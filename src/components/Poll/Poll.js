@@ -46,6 +46,17 @@ const Poll = (props) => {
       total += answer.votes;
     });
     setTotalVotes(total);
+    const radioElements = Array.from(
+      document.querySelectorAll('.poll-answerRadio')
+    );
+    const submitElement = document.querySelector(
+      '.poll-submitBar > button[type="submit"]'
+    );
+    radioElements.forEach((el) =>
+      el.addEventListener('click', () =>
+        submitElement.classList.remove('poll-noChoiceYet')
+      )
+    );
   }, [answers]);
 
   const handleSubmit = (e) => {
@@ -56,11 +67,18 @@ const Poll = (props) => {
       vote(pollId, answerObj);
       setChoice(answerObj);
     }
+    const submitElement = document.querySelector(
+      '.poll-submitBar > button[type="submit"]'
+    );
+    submitElement.classList.add('submitted');
+    const radioElements = Array.from(
+      document.querySelectorAll('.poll-answerRadio')
+    );
+    radioElements.forEach((el) => el.classList.add('submitted'));
   };
 
   const createSpansForText = (text) => {
     const wordArray = text.split(' ');
-    const textArray = [...text];
     return (
       <div className="text-styledContainer">
         {wordArray.map((word, index) => {
@@ -99,17 +117,6 @@ const Poll = (props) => {
   const randomizeLetterStyles = (char) => {
     let classes = [];
     if (char !== ' ') {
-      // 56 total
-      // 15 lowercase ?
-      // 8 black
-      //// 5 white background
-      //// 3 white outline
-      // 47 non-starter chars
-      //// 13 big chars
-      //// 13 / 47 = x / 56 // x = 15.489
-      // 15 leaning letters
-      //// 8 left-leaning
-      //// 7 right-leaning
       let randomSeed = Math.floor((Math.random() * 100 * 56) / 100);
       if (char !== char.toUpperCase()) {
         if (randomSeed > 15) {
@@ -165,7 +172,9 @@ const Poll = (props) => {
             ))}
           </div>
           <div className="poll-submitBar">
-            <button type="submit">Submit</button>
+            <button type="submit" className="poll-noChoiceYet">
+              Submit
+            </button>
             <p className="text-withStroke" data-text={`${totalVotes} votes`}>
               {totalVotes} votes
             </p>

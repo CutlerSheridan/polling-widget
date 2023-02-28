@@ -1,8 +1,10 @@
 .poll-outerContainer {
   --text-stroke: 7px;
+  margin: 2rem;
   padding: 2rem;
   max-width: 60rem;
   background: var(--clr-3);
+  transform: rotate(2deg);
 }
 .poll-innerContainer {
   padding: 2rem;
@@ -11,6 +13,7 @@
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-weight: bold;
   color: var(--clr-2);
+  transform: rotate(-3deg);
 }
 .poll-heading {
   --bigger-font: 3.3rem;
@@ -29,6 +32,13 @@
   background: var(--clr-3);
   border: none;
   cursor: pointer;
+  transition: all 0.2s;
+}
+.poll-submitBar > button[type='submit'].poll-noChoiceYet,
+.poll-submitBar > button[type='submit'].submitted {
+  pointer-events: none;
+  background: var(--clr-3-light);
+  color: var(--clr-2-dark);
 }
 .poll-submitBar > p {
   font-weight: bold;
