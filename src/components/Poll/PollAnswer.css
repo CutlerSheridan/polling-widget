@@ -9,14 +9,18 @@
   padding: 0.2rem;
   width: 100%;
   display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
 }
-
-/* LEFT SIDE START */
-.poll-answerLeftSide {
+.poll-answerGroup.submitted {
+  pointer-events: none;
+}
+/* LINE ONE START */
+.poll-answerLineOne {
   width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
+  align-items: baseline;
 }
 .poll-radioLabelContainer {
   display: flex;
@@ -55,37 +59,32 @@
 .poll-answerLabel:not(.submitted) {
   cursor: pointer;
 }
-.poll-answerGroup.submitted {
-  pointer-events: none;
+.poll-answerPercentNum {
+  font-size: 1.8rem;
+  visibility: visible;
+}
+.poll-answerPercentNum:not(.submitted) {
+  visibility: hidden;
+}
+/* LINE ONE END */
+
+/* LINE TWO START */
+.poll-answerLineTwo {
+  text-align: right;
+  min-width: 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.poll-answerLineTwo:not(.submitted) {
+  visibility: hidden;
 }
 .poll-answerPercentBar {
   position: relative;
-  margin-top: 0.4rem;
   height: 1rem;
   background: var(--clr-3);
   border-right: 2px solid var(--clr-2);
   transition: width 1s;
-  visibility: hidden;
-}
-.poll-answerPercentBar.submitted {
-  visibility: visible;
-}
-/* LEFT SIDE END */
-
-/* RIGHT SIDE START */
-.poll-answerRightSide {
-  text-align: right;
-  min-width: 7rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  visibility: hidden;
-}
-.poll-answerRightSide.submitted {
-  visibility: visible;
-}
-.poll-answerPercentNum {
-  font-size: 1.8rem;
 }
 .poll-answerTotalVotes {
   font-size: 1.3rem;
@@ -96,13 +95,6 @@
 }
 .poll-answerTotalVotes.text-withStroke::before {
   -webkit-text-stroke-width: 6px;
+  -moz-text-stroke-width: 6px;
 }
-/* RIGHT SIDE END */
-
-.submitted {
-  /* cursor: default; */
-}
-
-.poll-form > button {
-  margin-top: 1rem;
-}
+/* LINE TWO END */

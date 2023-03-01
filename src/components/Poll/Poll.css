@@ -59,6 +59,12 @@
   font-family: 'Saira Stencil One';
   font-weight: 400;
 }
+.poll-totalVotes {
+  /* this height matches the See results height to prevent layout shift */
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+}
 
 /* TEXT STYLES START */
 .text-styledContainer {
@@ -79,8 +85,8 @@
   position: relative;
   z-index: 0;
 }
-.poll-button.poll-noChoiceYet::before,
-.poll-button.submitted::before,
+.poll-submitButton.poll-noChoiceYet::before,
+.poll-submitButton.submitted::before,
 .text-withStroke::before {
   content: attr(data-text);
   position: absolute;
@@ -94,6 +100,11 @@
 .poll-button.submitted::before {
   padding: 0.7rem 1.3rem;
   transition: all 0.15s;
+}
+.poll-totalVotes::before {
+  display: flex;
+  align-items: center;
+  height: 4.5rem;
 }
 .text-bigger {
   font-size: var(--bigger-font);

@@ -11,7 +11,7 @@ const PollAnswer = (props) => {
       ${choice.id === answer.id ? 'poll-chosenAnswer' : ''}
       ${hasBeenSubmitted ? 'submitted' : ''}`}
     >
-      <div className={`poll-answerLeftSide`}>
+      <div className={`poll-answerLineOne`}>
         <div className="poll-radioLabelContainer">
           <input
             type="radio"
@@ -33,28 +33,26 @@ const PollAnswer = (props) => {
           </label>
         </div>
         <div
-          className={`poll-answerPercentBar ${
+          className={`poll-answerPercentNum text-withStroke ${
             hasBeenSubmitted ? 'submitted' : ''
           }`}
-          style={{ width: (hasBeenSubmitted ? percentOfVotes : 0) + '%' }}
-        ></div>
-      </div>
-      <div
-        className={`poll-answerRightSide ${
-          hasBeenSubmitted ? 'submitted' : ''
-        }`}
-      >
-        <div
-          className={`poll-answerPercentNum text-withStroke`}
           data-text={`${Math.round(percentOfVotes)}%`}
         >
           {Math.round(percentOfVotes)}%
         </div>
+      </div>
+      <div
+        className={`poll-answerLineTwo ${hasBeenSubmitted ? 'submitted' : ''}`}
+      >
+        <div
+          className={`poll-answerPercentBar`}
+          style={{ width: (hasBeenSubmitted ? percentOfVotes : 0) + '%' }}
+        ></div>
         <div
           className={`poll-answerTotalVotes text-withStroke`}
-          data-text={`(${answer.votes} votes)`}
+          data-text={`${answer.votes} votes`}
         >
-          ({answer.votes} votes)
+          {answer.votes} votes
         </div>
       </div>
     </div>

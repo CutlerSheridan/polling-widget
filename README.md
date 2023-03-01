@@ -6,7 +6,7 @@ Cast a vote and anyone else looking at the poll on their own device will immedia
 
 #### TODO NEXT
 
-- ? refactor DOM structure so choice and percent num are grouped and percent bar and num of votes are grouped
+- ? adjust Submit button style so it's aligned with radio buttons even when disabled
 
 #### TODO LATER
 
@@ -16,10 +16,14 @@ Cast a vote and anyone else looking at the poll on their own device will immedia
 
 ##### Style
 
-- ? add material icon for See Results chevron
 - add credit
 
 #### DONE
+
+_0.4.3_
+
+- restructure DOM so answer and respective percent num are grouped and percent bar and num of votes are grouped to allow for more control over horizontal alignment
+- adjust totalVotes element size so poll container doesn't resize upon submission
 
 _0.4.2_
 
