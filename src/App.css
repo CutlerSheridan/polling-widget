@@ -19,3 +19,12 @@ body {
   width: 100%;
   font-size: 2rem;
 }
+footer {
+  margin: 4rem 2rem;
+  font-size: 1.6rem;
+  font-family: monospace;
+  color: var(--clr-2);
+}
+footer a {
+  color: var(--clr-2);
+}

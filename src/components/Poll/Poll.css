@@ -2,7 +2,7 @@
   --text-stroke: 7px;
   margin: 2rem;
   padding: 2rem;
-  max-width: 60rem;
+  max-width: 50rem;
   background: var(--clr-3);
   transform: rotate(2deg);
 }
@@ -41,9 +41,11 @@
 }
 .poll-submitButton.poll-noChoiceYet,
 .poll-submitButton.submitted {
-  pointer-events: none;
+  padding: 0rem 0;
+  margin-left: calc(0.2rem + var(--text-stroke));
   background: transparent;
   color: var(--clr-1);
+  pointer-events: none;
 }
 .poll-submitBar > p {
   font-weight: bold;
@@ -54,13 +56,14 @@
   font-weight: 700;
   color: var(--clr-1);
   transform: rotate(-4deg);
+  width: max-content;
 }
 .poll-seeResults > span {
   font-family: 'Saira Stencil One';
   font-weight: 400;
 }
 .poll-totalVotes {
-  /* this height matches the See results height to prevent layout shift */
+  /* this height matches the See Results height to prevent layout shift */
   height: 4.5rem;
   display: flex;
   align-items: center;
@@ -79,12 +82,14 @@
 .text-wordSpace {
   margin: 0 0.2rem;
 }
+/* .poll-submitButton, */
 .poll-submitButton.poll-noChoiceYet,
 .poll-submitButton.submitted,
 .text-withStroke {
   position: relative;
   z-index: 0;
 }
+/* .poll-submitButton::before, */
 .poll-submitButton.poll-noChoiceYet::before,
 .poll-submitButton.submitted::before,
 .text-withStroke::before {
@@ -98,9 +103,27 @@
 }
 .poll-button.poll-noChoiceYet::before,
 .poll-button.submitted::before {
-  padding: 0.7rem 1.3rem;
+  /* padding: 0.7rem 0; */
   transition: all 0.15s;
 }
+/* .poll-submitButton {
+  margin-left: -0.7rem;
+  background: none;
+}
+.poll-submitButton::before {
+  left: 1.3rem;
+  top: 0.7rem; */
+/* -webkit-text-stroke-width: 0; */
+/* color: var(--clr-3); */
+/* }
+.poll-submitButton:not(.poll-noChoiceYet):not(.submitted)::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 1.4rem;
+  left: 2.2rem;
+  color: var(--clr-3);
+  z-index: -1;
+} */
 .poll-totalVotes::before {
   display: flex;
   align-items: center;

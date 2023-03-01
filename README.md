@@ -2,11 +2,9 @@
 
 ## A real-time polling widget
 
-Cast a vote and anyone else looking at the poll on their own device will immediately see your vote reflected. Persona 5 ransom-style letter styling is randomized and will look different every page load.
+Cast a vote and anyone else looking at the poll on their own device will immediately see your vote reflected. Persona 5 ransom-style letters are randomized and will look different every page load.
 
 #### TODO NEXT
-
-- ? adjust Submit button style so it's aligned with radio buttons even when disabled
 
 #### TODO LATER
 
@@ -16,9 +14,12 @@ Cast a vote and anyone else looking at the poll on their own device will immedia
 
 ##### Style
 
-- add credit
-
 #### DONE
+
+_1.0.0_
+
+- adjust Submit button alignment
+- add credit
 
 _0.4.3_
 
