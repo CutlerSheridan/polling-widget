@@ -6,9 +6,7 @@ Cast a vote and anyone else looking at the poll on their own device will immedia
 
 #### TODO NEXT
 
-- ? add white border to progress bars
-- ? make one corner of poll background grey
-- make choice highlighted and top answer bold or something to differentiate them; or just leave the checked radio by your choice and only style the top answer differently
+- ? refactor DOM structure so choice and percent num are grouped and percent bar and num of votes are grouped
 
 #### TODO LATER
 
@@ -19,10 +17,13 @@ Cast a vote and anyone else looking at the poll on their own device will immedia
 ##### Style
 
 - ? add material icon for See Results chevron
-- ? refactor DOM structure so choice and percent num are grouped and percent bar and num of votes are grouped
 - add credit
 
 #### DONE
+
+_0.4.2_
+
+- add white border-right to percent bars
 
 _0.4.1_
 

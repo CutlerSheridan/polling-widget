@@ -10,9 +10,6 @@
   width: 100%;
   display: flex;
 }
-.poll-chosenAnswer {
-  /* background: var(--clr-2-dark); */
-}
 
 /* LEFT SIDE START */
 .poll-answerLeftSide {
@@ -54,7 +51,6 @@
   --bigger-font: 2.4rem;
   margin-left: 1rem;
 }
-/* .poll-answerGroup:not(.submitted), */
 .poll-answerRadio:not(.submitted)::before,
 .poll-answerLabel:not(.submitted) {
   cursor: pointer;
@@ -67,7 +63,7 @@
   margin-top: 0.4rem;
   height: 1rem;
   background: var(--clr-3);
-  border: 2px solid var(--clr-3);
+  border-right: 2px solid var(--clr-2);
   transition: width 1s;
   visibility: hidden;
 }

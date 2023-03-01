@@ -9,6 +9,11 @@
 .poll-innerContainer {
   padding: 2rem;
   background: var(--clr-1);
+  /* background: linear-gradient(
+    to right bottom,
+    var(--clr-1) 60%,
+    var(--clr-3-light) 60%
+  ); */
   border: 10px solid var(--clr-2);
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-weight: bold;
