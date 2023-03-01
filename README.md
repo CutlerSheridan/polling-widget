@@ -2,9 +2,13 @@
 
 ## A real-time polling widget
 
+Cast a vote and anyone else looking at the poll on their own device will immediately see your vote reflected. Persona 5 ransom-style letter styling is randomized and will look different every page load.
+
 #### TODO NEXT
 
-- ? refactor DOM structure so choice and percent num are grouped and percent bar and num of votes are grouped
+- ? add white border to progress bars
+- ? make one corner of poll background grey
+- make choice highlighted and top answer bold or something to differentiate them; or just leave the checked radio by your choice and only style the top answer differently
 
 #### TODO LATER
 
@@ -14,12 +18,18 @@
 
 ##### Style
 
-- ? add white border to progress bars
-- ? make one corner of poll background grey
-- make choice highlighted and top answer bold or something to differentiate them; or just leave the checked radio by your choice and only style the top answer differently
+- ? add material icon for See Results chevron
+- ? refactor DOM structure so choice and percent num are grouped and percent bar and num of votes are grouped
 - add credit
 
 #### DONE
+
+_0.4.1_
+
+- tilt See Results button
+- make See Results font a stencil with red background
+- make Submit button red with black outline when inactive
+- make Submit say Submitted when submitted
 
 _0.4.0_
 

@@ -32,17 +32,27 @@
   background: var(--clr-3);
   border: none;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.15s;
 }
-.poll-button.poll-noChoiceYet,
-.poll-button.submitted {
+.poll-submitButton.poll-noChoiceYet,
+.poll-submitButton.submitted {
   pointer-events: none;
-  background: var(--clr-3-light);
-  color: var(--clr-2-dark);
+  background: transparent;
+  color: var(--clr-1);
 }
 .poll-submitBar > p {
   font-weight: bold;
   cursor: default;
+}
+.poll-seeResults {
+  font-family: 'Big Shoulders Stencil Text';
+  font-weight: 700;
+  color: var(--clr-1);
+  transform: rotate(-4deg);
+}
+.poll-seeResults > span {
+  font-family: 'Saira Stencil One';
+  font-weight: 400;
 }
 
 /* TEXT STYLES START */
@@ -58,10 +68,14 @@
 .text-wordSpace {
   margin: 0 0.2rem;
 }
+.poll-submitButton.poll-noChoiceYet,
+.poll-submitButton.submitted,
 .text-withStroke {
   position: relative;
   z-index: 0;
 }
+.poll-button.poll-noChoiceYet::before,
+.poll-button.submitted::before,
 .text-withStroke::before {
   content: attr(data-text);
   position: absolute;
@@ -70,6 +84,11 @@
   -webkit-text-stroke: var(--text-stroke) var(--clr-3);
   -moz-text-stroke: var(--text-stroke) var(--clr-3);
   z-index: -1;
+}
+.poll-button.poll-noChoiceYet::before,
+.poll-button.submitted::before {
+  padding: 0.7rem 1.3rem;
+  transition: all 0.15s;
 }
 .text-bigger {
   font-size: var(--bigger-font);

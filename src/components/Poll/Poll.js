@@ -74,7 +74,8 @@ const Poll = (props) => {
       setChoice(answerObj);
     }
   };
-
+  // this creates individual spans for every ransom-style char
+  // must be used for all ransom-style text
   const createSpansForText = (text) => {
     const wordArray = text.split(' ');
     return (
@@ -156,18 +157,21 @@ const Poll = (props) => {
     return (
       <div className="poll-seeResultsContainer">
         <button
-          className="poll-button"
+          className="poll-button poll-seeResults"
           onClick={setHasBeenSubmitted}
           value={true}
         >
-          See Results {'>'}
+          See Results <span>{'>'}</span>
         </button>
       </div>
     );
   };
   const createTotalVotesElement = () => {
     return (
-      <p className="text-withStroke" data-text={`${totalVotes} votes`}>
+      <p
+        className="text-withStroke poll-totalVotes"
+        data-text={`${totalVotes} votes`}
+      >
         {totalVotes} votes
       </p>
     );
@@ -193,11 +197,12 @@ const Poll = (props) => {
           <div className="poll-submitBar">
             <button
               type="submit"
-              className={`poll-button poll-noChoiceYet ${
+              className={`poll-button poll-noChoiceYet poll-submitButton ${
                 hasBeenSubmitted ? 'submitted' : ''
               }`}
+              data-text={`${hasBeenSubmitted ? 'Submitted' : 'Submit'}`}
             >
-              Submit
+              {hasBeenSubmitted ? 'Submitted' : 'Submit'}
             </button>
             {hasBeenSubmitted
               ? createTotalVotesElement()
