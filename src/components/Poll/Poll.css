@@ -25,8 +25,8 @@
   justify-content: space-between;
   align-items: center;
 }
-.poll-submitBar > button[type='submit'] {
-  padding: 0.6rem 1rem;
+.poll-button {
+  padding: 0.7rem 1.3rem;
   font-weight: bold;
   color: inherit;
   background: var(--clr-3);
@@ -34,14 +34,15 @@
   cursor: pointer;
   transition: all 0.2s;
 }
-.poll-submitBar > button[type='submit'].poll-noChoiceYet,
-.poll-submitBar > button[type='submit'].submitted {
+.poll-button.poll-noChoiceYet,
+.poll-button.submitted {
   pointer-events: none;
   background: var(--clr-3-light);
   color: var(--clr-2-dark);
 }
 .poll-submitBar > p {
   font-weight: bold;
+  cursor: default;
 }
 
 /* TEXT STYLES START */

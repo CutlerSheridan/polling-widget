@@ -1,19 +1,9 @@
 import './PollAnswer.css';
 
 const PollAnswer = (props) => {
-  const { answer, choice, totalVotes, createSpansForText } = props;
+  const { answer, choice, totalVotes, createSpansForText, hasBeenSubmitted } =
+    props;
   const percentOfVotes = (answer.votes * 100) / totalVotes;
-  let hasBeenSubmitted = choice.isAwaitingChoice ? false : true;
-
-  const addPercentElements = () => {
-    if (hasBeenSubmitted) {
-      return (
-        <div className="poll-answerPercentContainer">
-          <div className="poll-answerPercent"></div>
-        </div>
-      );
-    }
-  };
 
   return (
     <div

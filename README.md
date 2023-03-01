@@ -5,24 +5,26 @@
 #### TODO NEXT
 
 - ? refactor DOM structure so choice and percent num are grouped and percent bar and num of votes are grouped
-- ? refactor hasBeenSubmitted into state of Poll to pass down into PollAnswer;
 
 #### TODO LATER
 
 ##### Features
 
-- add 'see results' button without voting in place of total vote count in bottom right, then swap with total vote count upon clicking that or submitting a vote
-
 ##### Behavior
 
 ##### Style
 
+- ? add white border to progress bars
 - ? make one corner of poll background grey
 - make choice highlighted and top answer bold or something to differentiate them; or just leave the checked radio by your choice and only style the top answer differently
-- make it all look like Persona 5
 - add credit
 
 #### DONE
+
+_0.4.0_
+
+- refactor hasBeenSubmitted into state of Poll to pass down into PollAnswer
+- add 'see results' button without voting in place of total vote count in bottom right, then swap with total vote count upon clicking that or submitting a vote
 
 _0.3.5_
 

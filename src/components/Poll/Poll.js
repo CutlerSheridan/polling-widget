@@ -15,6 +15,7 @@ const Poll = (props) => {
   const [answers, setAnswers] = useState([]);
   const [totalVotes, setTotalVotes] = useState(0);
   const [choice, setChoice] = useState({ isAwaitingChoice: true });
+  const [hasBeenSubmitted, setHasBeenSubmitted] = useState(false);
 
   useEffect(() => {
     fetchQuestion(pollId).then((result) => {
@@ -58,6 +59,11 @@ const Poll = (props) => {
       )
     );
   }, [answers]);
+  useEffect(() => {
+    if (!choice.isAwaitingChoice) {
+      setHasBeenSubmitted(true);
+    }
+  }, [choice]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -67,14 +73,6 @@ const Poll = (props) => {
       vote(pollId, answerObj);
       setChoice(answerObj);
     }
-    const submitElement = document.querySelector(
-      '.poll-submitBar > button[type="submit"]'
-    );
-    submitElement.classList.add('submitted');
-    const radioElements = Array.from(
-      document.querySelectorAll('.poll-answerRadio')
-    );
-    radioElements.forEach((el) => el.classList.add('submitted'));
   };
 
   const createSpansForText = (text) => {
@@ -154,6 +152,27 @@ const Poll = (props) => {
     return classes;
   };
 
+  const createSeeResultsButton = () => {
+    return (
+      <div className="poll-seeResultsContainer">
+        <button
+          className="poll-button"
+          onClick={setHasBeenSubmitted}
+          value={true}
+        >
+          See Results {'>'}
+        </button>
+      </div>
+    );
+  };
+  const createTotalVotesElement = () => {
+    return (
+      <p className="text-withStroke" data-text={`${totalVotes} votes`}>
+        {totalVotes} votes
+      </p>
+    );
+  };
+
   return (
     <div className="poll-outerContainer">
       <div className="poll-innerContainer">
@@ -166,18 +185,23 @@ const Poll = (props) => {
                 choice={choice}
                 totalVotes={totalVotes}
                 createSpansForText={createSpansForText}
-                // randomizeSentenceLetters={randomizeSentenceLetters}
+                hasBeenSubmitted={hasBeenSubmitted}
                 key={x.id}
               />
             ))}
           </div>
           <div className="poll-submitBar">
-            <button type="submit" className="poll-noChoiceYet">
+            <button
+              type="submit"
+              className={`poll-button poll-noChoiceYet ${
+                hasBeenSubmitted ? 'submitted' : ''
+              }`}
+            >
               Submit
             </button>
-            <p className="text-withStroke" data-text={`${totalVotes} votes`}>
-              {totalVotes} votes
-            </p>
+            {hasBeenSubmitted
+              ? createTotalVotesElement()
+              : createSeeResultsButton()}
           </div>
         </form>
       </div>

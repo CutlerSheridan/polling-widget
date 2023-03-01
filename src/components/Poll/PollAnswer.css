@@ -54,7 +54,7 @@
   --bigger-font: 2.4rem;
   margin-left: 1rem;
 }
-.poll-answerGroup:not(.submitted),
+/* .poll-answerGroup:not(.submitted), */
 .poll-answerRadio:not(.submitted)::before,
 .poll-answerLabel:not(.submitted) {
   cursor: pointer;
