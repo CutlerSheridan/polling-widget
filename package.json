@@ -1,6 +1,6 @@
 {
   "name": "polling-widget",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "homepage": "https://cutlersheridan.github.io/polling-widget",
   "private": true,
   "dependencies": {

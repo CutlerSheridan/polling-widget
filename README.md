@@ -16,6 +16,10 @@ Cast a vote and anyone else looking at the poll on their own device will immedia
 
 #### DONE
 
+_1.0.4_
+
+- change page title
+
 _1.0.3_
 
 - make "vote/s" singular if only one vote in poll total
