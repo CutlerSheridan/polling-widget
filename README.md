@@ -16,6 +16,11 @@ Cast a vote and anyone else looking at the poll on their own device will immedia
 
 #### DONE
 
+_1.0.2_
+
+- add space between % bar and answer's total votes if bar is at 100%
+- make "vote/s" singular if only one vote
+
 _1.0.1_
 
 - fix % total so, if no votes present, reads 0%, not NaN%

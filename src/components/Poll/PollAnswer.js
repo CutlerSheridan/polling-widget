@@ -51,9 +51,9 @@ const PollAnswer = (props) => {
         ></div>
         <div
           className={`poll-answerTotalVotes text-withStroke`}
-          data-text={`${answer.votes} votes`}
+          data-text={`${answer.votes} ${answer.votes === 1 ? 'vote' : 'votes'}`}
         >
-          {answer.votes} votes
+          {answer.votes} {answer.votes === 1 ? 'vote' : 'votes'}
         </div>
       </div>
     </div>
