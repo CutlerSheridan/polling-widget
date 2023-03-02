@@ -16,6 +16,10 @@ Cast a vote and anyone else looking at the poll on their own device will immedia
 
 #### DONE
 
+_1.0.1_
+
+- fix % total so, if no votes present, reads 0%, not NaN%
+
 _1.0.0_
 
 - adjust Submit button alignment

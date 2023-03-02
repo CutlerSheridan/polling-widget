@@ -3,7 +3,8 @@ import './PollAnswer.css';
 const PollAnswer = (props) => {
   const { answer, choice, totalVotes, createSpansForText, hasBeenSubmitted } =
     props;
-  const percentOfVotes = (answer.votes * 100) / totalVotes;
+  const percentOfVotes =
+    totalVotes === 0 ? 0 : (answer.votes * 100) / totalVotes;
 
   return (
     <div
