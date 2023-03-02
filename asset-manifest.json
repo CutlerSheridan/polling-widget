@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/polling-widget/static/css/main.1a678154.css",
-    "main.js": "/polling-widget/static/js/main.1e652585.js",
+    "main.css": "/polling-widget/static/css/main.7fdd12c6.css",
+    "main.js": "/polling-widget/static/js/main.8d3662e6.js",
     "index.html": "/polling-widget/index.html",
-    "main.1a678154.css.map": "/polling-widget/static/css/main.1a678154.css.map",
-    "main.1e652585.js.map": "/polling-widget/static/js/main.1e652585.js.map"
+    "main.7fdd12c6.css.map": "/polling-widget/static/css/main.7fdd12c6.css.map",
+    "main.8d3662e6.js.map": "/polling-widget/static/js/main.8d3662e6.js.map"
   },
   "entrypoints": [
-    "static/css/main.1a678154.css",
-    "static/js/main.1e652585.js"
+    "static/css/main.7fdd12c6.css",
+    "static/js/main.8d3662e6.js"
   ]
 }
