@@ -86,10 +86,8 @@
   transition: width 1s;
 }
 .poll-answerTotalVotes {
-  margin-left: 1rem;
-
+  min-width: 6rem;
   font-size: 1.3rem;
-  min-width: max-content;
 }
 .poll-answerPercentNum.text-withStroke::before,
 .poll-answerTotalVotes.text-withStroke::before {

@@ -170,9 +170,9 @@ const Poll = (props) => {
     return (
       <p
         className="text-withStroke poll-totalVotes"
-        data-text={`${totalVotes} votes`}
+        data-text={`${totalVotes} ${totalVotes === 1 ? 'vote' : 'votes'}`}
       >
-        {totalVotes} votes
+        {totalVotes} {totalVotes === 1 ? 'vote' : 'votes'}
       </p>
     );
   };

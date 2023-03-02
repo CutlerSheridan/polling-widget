@@ -16,10 +16,15 @@ Cast a vote and anyone else looking at the poll on their own device will immedia
 
 #### DONE
 
+_1.0.3_
+
+- make "vote/s" singular if only one vote in poll total
+- adjust answer vote total min-width
+
 _1.0.2_
 
 - add space between % bar and answer's total votes if bar is at 100%
-- make "vote/s" singular if only one vote
+- make "vote/s" singular if only one vote in answer total
 
 _1.0.1_
 
