@@ -12,7 +12,11 @@ You can read about how IGN has been with me most of my life and why I'd love to 
 
 ### POLLING WIDGET
 
-See the deployed page [here](https://cutlersheridan.github.io/polling-widget), or the raw code in the `/src/` folder. I think it turned out looking really good, and all the votes are from real people from Reddit. My next set of programming lessons are on building my own backend, so I'll be able to do that by the time the internship starts, but for the time being I used Firebase. The structure of the data can be gleaned from the code itself, but for facility's sake, it's organized like this:
+See the deployed page [here](https://cutlersheridan.github.io/polling-widget), or the raw code in the `/src/` folder.
+
+I think it turned out looking really good, and all the votes are from real people from Reddit. I'm playing Persona 5 Royal right now and thought I'd use that as inspiration. This was my first time integrating a database where data was watched and updated in real-time for all users and it was fun getting everything to work. I also had a really good time analyzing various elements of the game's UI, especially [the pause menu](https://images.gamebanana.com/img/ss/mods/62d1324c5bd85.jpg), and figuring out how to recreate the _feel_ of the game.
+
+My next set of programming lessons are on building my own backend, so I'll be able to do that by the time the internship starts, but for the time being I used Firebase. The structure of the data can be gleaned from the code itself, but for facility's sake, it's organized like this:
 
 ```mermaid
 graph LR
@@ -47,9 +51,13 @@ Cutler Sheridan
 
 #### DONE
 
+_1.1.3_
+
+- update README
+
 _1.1.2_
 
--update README
+- update README
 
 _1.1.1_
 
