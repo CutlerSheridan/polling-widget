@@ -6,11 +6,11 @@ Cast a vote and anyone else looking at the poll on their own device will immedia
 
 ## IGN Code Foo 2023
 
-#### INTRODUCTION
+### INTRODUCTION
 
 You can read about how IGN has been with me most of my life and why I'd love to intern there [here](https://github.com/CutlerSheridan/polling-widget/blob/main/question-responses/introduction.md).
 
-#### POLLING WIDGET
+### POLLING WIDGET
 
 See the deployed page [here](https://cutlersheridan.github.io/polling-widget), or the raw code in the `/src/` folder. I think it turned out looking really good, and all the votes are from real people from Reddit. My next set of programming lessons are on building my own backend, so I'll be able to do that by the time the internship starts, but for the time being I used Firebase. The structure of the data can be gleaned from the code itself, but for facility's sake, it's organized like this:
 
@@ -26,11 +26,11 @@ H --> J(votes: 48)
 
 And so on for all the possible answers.
 
-#### HISUI'S NEW POWER PLANT
+### HISUI'S NEW POWER PLANT
 
 I've solved this problem as thoroughly as I can with the given information [here](https://github.com/CutlerSheridan/polling-widget/blob/main/question-responses/powerPlant.md).
 
-#### BONUS
+### BONUS
 
 Take a look at my other project repos [here](https://github.com/cutlersheridan)! Browse the source code or the deployed GitHub Pages if you just want to see the end result. I have [a Todo app](https://cutlersheridan.github.io/todo/) that allows users to sign in with google and track their own tasks, [an I Spy game](https://cutlersheridan.github.io/i-spy/) that fetches the game images and which items to look for from a database, and [a Battleship game](https://cutlersheridan.github.io/battleship/) that two people can play or you can play with an AI that will give you a run for your money, amongst other things.
 
@@ -46,6 +46,10 @@ Cutler Sheridan
   - maybe not though—I like being able to see the pre-submit and post-submit stages of the UI by refreshing; not a huge deal if this particular project has someone submit more than once
 
 #### DONE
+
+_1.1.2_
+
+-update README
 
 _1.1.1_
 
