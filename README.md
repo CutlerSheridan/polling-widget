@@ -12,7 +12,7 @@ You can read about how IGN has been with me most of my life and why I'd love to 
 
 ### POLLING WIDGET
 
-See the deployed page [here](https://cutlersheridan.github.io/polling-widget), or the raw code in the `/src/` folder.
+~~See the deployed page [here](https://cutlersheridan.github.io/polling-widget)~~ _[I was told to make this repo private, so the publicly deployed page is no longer accessible]_, or the raw code in the `/src/` folder.
 
 I think it turned out looking really good, and all the votes are from real people from Reddit. I'm playing Persona 5 Royal right now and thought I'd use that as inspiration. This was my first time integrating a database where data was watched and updated in real-time for all users and it was fun getting everything to work. I also had a really good time analyzing various elements of the game's UI, especially [the pause menu](https://images.gamebanana.com/img/ss/mods/62d1324c5bd85.jpg), and figuring out how to recreate the _feel_ of the game.
 
@@ -50,6 +50,10 @@ Cutler Sheridan
   - maybe not though—I like being able to see the pre-submit and post-submit stages of the UI by refreshing; not a huge deal if this particular project has someone submit more than once
 
 #### DONE
+
+_1.1.5_
+
+- update README now that repo is private
 
 _1.1.4_
 
