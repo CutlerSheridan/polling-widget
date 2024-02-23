@@ -8,7 +8,8 @@ const App = () => {
       <footer>
         <p>Made by Cutler Sheridan.</p>
         <p>
-          See more <a href="https://www.github.com/cutlersheridan">here</a>.
+          See more <a href="https://cutlersheridan.github.io/portfolio">here</a>
+          .
         </p>
       </footer>
     </div>

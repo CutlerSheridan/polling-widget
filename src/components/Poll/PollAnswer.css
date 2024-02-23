@@ -50,6 +50,11 @@
 .poll-answerRadio:checked::before {
   background: var(--clr-3);
 }
+@media only screen and (hover: hover) {
+  .poll-answerRadio:hover:not(.poll-answerRadio:checked)::before {
+    background: var(--clr-3-light);
+  }
+}
 .poll-answerLabel {
   --bigger-font: 2.4rem;
   margin-left: 1rem;

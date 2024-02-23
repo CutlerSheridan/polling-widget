@@ -12,11 +12,11 @@ You can read about how IGN has been with me most of my life and why I'd love to 
 
 ### POLLING WIDGET
 
-~~See the deployed page [here](https://cutlersheridan.github.io/polling-widget)~~ _[I was told to make this repo private, so the publicly deployed page is no longer accessible]_, or the raw code in the `/src/` folder.
+~~See the deployed page [here](https://cutlersheridan.github.io/polling-widget)~~ , or the raw code in the `/src/` folder.
 
 I think it turned out looking really good, and all the votes are from real people from Reddit. I'm playing Persona 5 Royal right now and thought I'd use that as inspiration. This was my first time integrating a database where data was watched and updated in real-time for all users and it was fun getting everything to work. I also had a really good time analyzing various elements of the game's UI, especially [the pause menu](https://images.gamebanana.com/img/ss/mods/62d1324c5bd85.jpg), and figuring out how to recreate the _feel_ of the game.
 
-My next set of programming lessons are on building my own backend, so I'll be able to do that by the time the internship starts, but for the time being I used Firebase. The structure of the data can be gleaned from the code itself, but for facility's sake, it's organized like this:
+I used Firebase for the database. The structure of the data can be gleaned from the code itself, but for facility's sake, it's organized like this:
 
 ```mermaid
 graph LR
@@ -36,7 +36,7 @@ I've solved this problem as thoroughly as I can with the given information [here
 
 ### BONUS
 
-Take a look at my other project repos [here](https://github.com/cutlersheridan)! Browse the source code or the deployed GitHub Pages if you just want to see the end result. I have [a Todo app](https://cutlersheridan.github.io/todo/) that allows users to sign in with google and track their own tasks, [an I Spy game](https://cutlersheridan.github.io/i-spy/) that fetches the game images and which items to look for from a database, and [a Battleship game](https://cutlersheridan.github.io/battleship/) that two people can play or you can play with an AI that will give you a run for your money, amongst other things.
+Take a look at my other project repos [here](https://github.com/cutlersheridan)! Browse the source code or the deployed GitHub Pages if you just want to see the end result. I have [a Todo app](https://cutlersheridan.github.io/todo/) that allows users to sign in with google and track their own tasks, [an I Spy game](https://cutlersheridan.github.io/i-spy/) that fetches the game images, which items to look for, and where those parts of the image are located from a database, and [a Battleship game](https://cutlersheridan.github.io/battleship/) that two people can play or you can play with an AI that will give you a run for your money, amongst other things.
 
 Looking forward to hearing from you!
 
@@ -50,6 +50,11 @@ Cutler Sheridan
   - maybe not though—I like being able to see the pre-submit and post-submit stages of the UI by refreshing; not a huge deal if this particular project has someone submit more than once
 
 #### DONE
+
+_1.1.6_
+
+- make poll radio buttons highlight on hover
+- change "more work" button to link to portfolio
 
 _1.1.5_
 
